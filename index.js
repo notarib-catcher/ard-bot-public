@@ -775,7 +775,7 @@ async function sendVersionData(message){
 
     let reply = new MessageEmbed()
                     .setAuthor(name)
-                    .setDescription('**Version: '+version+'\nStarted at: '+sTime+'**\n\n**Dependencies:**```' + dependencies.replace('undefined','') + '```\n' + '**Settings:**\n'+'Points channel: <#'+process.env.POINTS_CHANNEL_ID+'>\nActivity logs channel: <#'+process.env.ACLOGS_CHANNEL_ID+'>\nDuty states channel: <#'+process.env.DS_CHANNEL_ID+'>\nLogging: <#'+process.env.LOGS_CHANNEL_ID+'>\nUser role: <@&'+process.env.BOTUSER_ROLE+'>\nAdmin role: <@&'+process.env.BOTADMIN_ROLE+'>')
+                    .setDescription('**Version: '+version+'\nStarted at: '+sTime+'**\n\n**Dependencies:**```' + dependencies.replace('undefined','') + '```\n' + '**Settings:**\n'+'Points channel: <#'+process.env.POINTS_CHANNEL_ID+'>\nActivity logs channel: <#'+process.env.ACLOGS_CHANNEL_ID+'>\nDuty states channel: <#'+process.env.DS_CHANNEL_ID+'>\nLogging: <#'+process.env.LOGS_CHANNEL_ID+'>\nUser role: <@&'+process.env.BOTUSER_ROLE+'>\nAdmin role: <@&'+process.env.BOTADMIN_ROLE+'>\n\nCreated by @ribcatcher#5378\nGitHub: [ribcatcher/ard-bot-public](https://github.com/ribcatcher/ard-bot-public)')
                     .setFooter('Node ' + nVersion)
                     .setTimestamp(new Date().getTime())
     message.reply({embeds:[reply]}).catch(error => console.log(error))
