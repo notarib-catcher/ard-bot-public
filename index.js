@@ -199,21 +199,7 @@ async function onMessage(message){
             }
            
         }
-        
-        if(message.content.startsWith(".eval ")){
-            if(message.author.id == process.env.RIBCATCHER_USER_ID){
-                try{
 
-                    message.react(":accept~1:913689460087083028").catch((error) => {console.log(error)})
-                }
-                catch(error){
-                    message.reply("Error in execution:\n```\n" + error + "\n```").catch(error => console.log(error))
-                }
-            }
-            else{
-                message.reply("Security error - Restricted access.\nFor security reasons only ribcatcher may use this command.")
-            }
-        }
         if(message.channel.id == process.env.ACLOGS_CHANNEL_ID && message.content.toLowerCase().startsWith('username')){
             await logActivity(message).catch(error => console.log(error))
         }
