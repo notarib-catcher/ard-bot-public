@@ -15,7 +15,8 @@ Run npm install
 ```npm install```
 
 ## Setup
-See config.env.example and bot_authkey.env.json.example for details on what you need to set up.
+See `config.env.example` and `bot_authkey.env.json.example` for details on what you need to set up.
+Remember to remove the `.example` from the ends when you're done.
 
 ## Running the bot
 
