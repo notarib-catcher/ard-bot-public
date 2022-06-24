@@ -1,4 +1,4 @@
-# ard-bot-public
+# Public release of the ARD Grading Utility
 
 ## Installation
 
