@@ -773,7 +773,11 @@ async function sendVersionData(message){
     let name = package.name
     let sTime = sDate.toUTCString()
 
-    let reply = new MessageEmbed().setAuthor(name).setDescription('**Version: '+version+'\nStarted at: '+sTime+'**\n\n**Dependencies:**```' + dependencies.replace('undefined','') + '```\n' + '**Settings:**\n'+'Points channel: <#'+process.env.POINTS_CHANNEL_ID+'>\nActivity logs channel: <#'+process.env.ACLOGS_CHANNEL_ID+'>\nDuty states channel: <#'+process.env.DS_CHANNEL_ID+'>\nLogging: <#'+process.env.LOGS_CHANNEL_ID+'>\nUser role: <@&'+process.env.BOTUSER_ROLE+'>\nAdmin role: <@&'+process.env.BOTADMIN_ROLE+'>').setFooter('Node ' + nVersion).setTimestamp(new Date().getTime())
+    let reply = new MessageEmbed()
+                    .setAuthor(name)
+                    .setDescription('**Version: '+version+'\nStarted at: '+sTime+'**\n\n**Dependencies:**```' + dependencies.replace('undefined','') + '```\n' + '**Settings:**\n'+'Points channel: <#'+process.env.POINTS_CHANNEL_ID+'>\nActivity logs channel: <#'+process.env.ACLOGS_CHANNEL_ID+'>\nDuty states channel: <#'+process.env.DS_CHANNEL_ID+'>\nLogging: <#'+process.env.LOGS_CHANNEL_ID+'>\nUser role: <@&'+process.env.BOTUSER_ROLE+'>\nAdmin role: <@&'+process.env.BOTADMIN_ROLE+'>')
+                    .setFooter('Node ' + nVersion)
+                    .setTimestamp(new Date().getTime())
     message.reply({embeds:[reply]}).catch(error => console.log(error))
 }
 
@@ -958,7 +962,10 @@ async function backgroundCheck(message, username, permsdetails=false){
     }
 
 
-    let blCheckEmbed = new MessageEmbed().setDescription((permsdetails)?descriptionReturned:safedescription).setColor(embedcolour).setFooter('ARD Grading Utility ' + 'v'+botVersion).setTimestamp(new Date().getTime())
+    let blCheckEmbed = new MessageEmbed()
+                        .setDescription((permsdetails)?descriptionReturned:safedescription)
+                        .setColor(embedcolour).setFooter('ARD Grading Utility ' + 'v'+botVersion)
+                        .setTimestamp(new Date().getTime())
     await sentMsg.edit({embeds:[returnedDetails,blCheckEmbed]}).catch(error => {console.log(error)})
 }
 async function UTIL_getUserID(robloxUsername){
