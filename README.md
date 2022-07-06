@@ -1,5 +1,7 @@
 # Public release of the ARD Grading Utility
 
+Useful for duty states/ logs / etc - This was custom made for a gaming guild but I decided to release it publicly as I have left them.
+
 ## Installation
 
 Clone the repo to an empty folder
